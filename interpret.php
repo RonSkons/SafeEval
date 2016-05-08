@@ -1,9 +1,9 @@
-<?php
 
+function safeEval($code){
     $sUrl = 'http://rextester.com/rundotnet/Run';
     $params = array('http' => array(
         'method' => 'POST',
-        'content' => 'Program=<?php '.$_GET["code"].'&LanguageChoiceWrapper=8'
+        'content' => 'Program=<?php '.$code.'&LanguageChoiceWrapper=8'
     ));
 
     $ctx = stream_context_create($params);
@@ -21,9 +21,9 @@
 $obj = json_decode($response);
 
 if(!$obj->{'Errors'}) {
-    echo $obj->{'Result'};
+    return $obj->{'Result'};
 }else{
-    echo $obj->{'Errors'};
+    return $obj->{'Errors'};
+}
 }
 
-?>
