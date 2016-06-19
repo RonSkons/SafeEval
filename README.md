@@ -8,4 +8,4 @@
 <i>NOTE: Do not include any <code>&lt;?php</code> and <code>?&gt;</code> tags in the code which you want to run.</i>
 </ol>
 <h1>How Does It Work?</h1>
-SafeEval uses an unofficial third-party code PHP execution API to get text output and run code.
+SafeEval uses athird-party PHP execution API (rextester.com) to get text output and run code.
