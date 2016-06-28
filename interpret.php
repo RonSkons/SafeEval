@@ -18,12 +18,12 @@ function safeEval($code){
     {
         throw new Exception("Problem reading data from $sUrl, $php_errormsg");
     }
-$obj = json_decode($response);
-
-if(!$obj->{'Errors'}) {
-    return $obj->{'Result'};
-}else{
-    return $obj->{'Errors'};
-}
+    $obj = json_decode($response);
+    
+    if (!$obj->{'Errors'}) {
+        return $obj->{'Result'};
+    } else {
+        return $obj->{'Errors'};
+    }
 }
 
