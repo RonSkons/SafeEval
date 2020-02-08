@@ -8,4 +8,5 @@
 <i>NOTE: Do not include any <code>&lt;?php</code> and <code>?&gt;</code> tags in the code which you want to run.</i>
 </ol>
 <h1>How Does It Work?</h1>
-SafeEval uses a third-party PHP execution API (rextester.com) to get text output and run code.
+SafeEval uses rextester.com in order to remotely execute any code that is passed to it. 
+This is more of a proof-of-concept than anything else, and introduces too many of its own security flaws to be considered remotely useful.
